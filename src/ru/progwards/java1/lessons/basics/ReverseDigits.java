@@ -2,7 +2,7 @@ package ru.progwards.java1.lessons.basics;
 
 public class ReverseDigits {
     public static void main(String[] args) {
-        int i = reverseDigits(123);
+//        int i = reverseDigits(123);
     }
     public static int reverseDigits(int number) {
         String s1;
