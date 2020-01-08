@@ -3,9 +3,9 @@ package ru.progwards.java1.lessons.classes;
 public class Animal {
     private double weight;
     private double coefficient_weight;
-    public Animal(double weight, double coefficient_weight) {
+    public Animal(double weight) {
         this.weight = weight;
-        this.coefficient_weight = coefficient_weight;
+        this.coefficient_weight = 0.02;
     }
 
     public enum AnimalKind {

@@ -3,10 +3,10 @@ package ru.progwards.java1.lessons.classes;
 public class Duck extends Animal {
     private double weight;
     private double coefficient_weight;
-    public Duck(double weight, double coefficient_weight) {
-        super(weight, coefficient_weight);
+    public Duck(double weight) {
+        super(weight);
         this.weight = weight;
-        this.coefficient_weight = coefficient_weight;
+        this.coefficient_weight = 0.04;
     }
     @Override
     public AnimalKind getKind() {
