@@ -2,11 +2,11 @@ package ru.progwards.java1.lessons.classes;
 
 public class Duck extends Animal {
     private double weight;
-    private double coefficient_weight;
+    private double coefficient_weight = 0.04;
     public Duck(double weight) {
-        super(weight, 0.04);
+        super(weight);
         this.weight = weight;
-        this.coefficient_weight = coefficient_weight;
+        super.coefficient_weight = coefficient_weight;
     }
 
     @Override

@@ -1,20 +1,17 @@
 package ru.progwards.java1.lessons.classes;
 
 public class Animal {
-    private double weight;
-    private double coefficient_weight = 0.02;
-    public Animal(double weight, double coefficient_weight) {
+    public double weight;
+    public double coefficient_weight = 0.02;
+    public Animal(double weight) {
         this.weight = weight;
         this.coefficient_weight = coefficient_weight;
     }
 
     public static void main(String[] args) {
-//        Animal animal = new Animal(340);
-//        double d = animal.calculateFoodWeight();
-//        System.out.println(d);
-//        Cow cow = new Cow(340);
-//        double d1 = cow.calculateFoodWeight();
-//        System.out.println(d1);
+        Cow cow = new Cow(340);
+        double d1 = cow.calculateFoodWeight();
+        System.out.println(d1);
     }
 
     public enum AnimalKind {
