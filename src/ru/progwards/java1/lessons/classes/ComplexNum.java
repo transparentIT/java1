@@ -23,10 +23,10 @@ public class ComplexNum {
     }
 
     public ComplexNum mul(ComplexNum num) {
-        return new ComplexNum(a * num.a, b * num.b);
+        return new ComplexNum((a * num.a) - (b * num.b), (b * num.a) + (a + num.b));
     }
 
     public ComplexNum div(ComplexNum num) {
-        return new ComplexNum(a / num.a, b / num.b);
+        return new ComplexNum(((a * num.a) + (b * num.b)) / ((num.a * num.b) + (num.b * num.b)), ((b * num.a) - (a * num.b)) / ((num.a * num.a) + (num.b * num.b)));
     }
 }
