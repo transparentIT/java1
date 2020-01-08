@@ -36,7 +36,11 @@ public class CyclesGoldenFibo {
             n0 = n1;
             n1 = n2;
         }
-        return n2;
+        if (n == 1 || n == 2) {
+            return 1;
+        } else {
+            return n2;
+        }
     }
     public static boolean isGoldenTriangle(int a, int b, int c) {
         return false;
