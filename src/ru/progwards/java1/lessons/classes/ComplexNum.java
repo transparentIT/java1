@@ -9,6 +9,13 @@ public class ComplexNum {
         this.b = b;
     }
 
+    public static void main(String[] args) {
+        ComplexNum c1 = new ComplexNum(1000, 1009);
+        ComplexNum c2 = new ComplexNum(100, 91);
+        System.out.println(c1.mul(c2));
+        System.out.println(c1.div(c2));
+    }
+
     @Override
     public String toString() {
         return a + "+" + b + "i";
@@ -23,10 +30,10 @@ public class ComplexNum {
     }
 
     public ComplexNum mul(ComplexNum num) {
-        return new ComplexNum((a * num.a) - (b * num.b), (b * num.a) + (a + num.b));
+        return new ComplexNum((a * num.a) - (b * num.b), (b * num.a) + (a * num.b));
     }
 
     public ComplexNum div(ComplexNum num) {
-        return new ComplexNum(((a * num.a) + (b * num.b)) / ((num.a * num.b) + (num.b * num.b)), ((b * num.a) - (a * num.b)) / ((num.a * num.a) + (num.b * num.b)));
+        return new ComplexNum(((a * num.a) + (b * num.b)) / ((num.a * num.a) + (num.b * num.b)), ((b * num.a) - (a * num.b)) / ((num.a * num.a) + (num.b * num.b)));
     }
 }
