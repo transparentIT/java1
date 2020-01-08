@@ -4,9 +4,9 @@ public class Cow extends Animal {
     private double weight;
     private double coefficient_weight;
     public Cow(double weight) {
-        super(weight);
+        super(weight, 0.05);
         this.weight = weight;
-        this.coefficient_weight = 0.05;
+        this.coefficient_weight = coefficient_weight;
     }
 
     @Override
