@@ -17,7 +17,7 @@ public class Eratosthenes {
     }
 
     private void sift() {
-        for (int i = 2; i < sieve.length - 1; i++) {
+        for (int i = 2; i < this.sieve.length - 1; i++) {
             if (i % 2 == 0) {
                 this.sieve[i] = false;
             }
