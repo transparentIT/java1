@@ -19,18 +19,18 @@ public class Eratosthenes {
     private void sift() {
         for (int i = 2; i < sieve.length - 1; i++) {
             if (i % 2 == 0) {
-                sieve[i] = false;
+                this.sieve[i] = false;
             }
         }
     }
 
     public boolean isSimple(int n) {
-        return sieve[n];
+        return this.sieve[n];
     }
 
     public static void main(String[] args) {
         Eratosthenes eratosthenes = new Eratosthenes(10);
-        boolean b = eratosthenes.isSimple(0);
+        boolean b = eratosthenes.isSimple(6);
         System.out.println(b);
     }
 }
