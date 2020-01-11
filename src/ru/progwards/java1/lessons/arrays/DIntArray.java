@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DIntArray {
-    private int[] ints;
+    private int[] ints = new int[0];
 
     public DIntArray() {
     }
@@ -51,5 +51,10 @@ public class DIntArray {
 
     public static void main(String[] args) {
         // пока тест даже писать не буду, проверим смогу ли в слепую сделать)
+        DIntArray dIntArray = new DIntArray();
+        dIntArray.add(10);
+        for (int i = 0; i < dIntArray.ints.length; i++) {
+            System.out.println(dIntArray.ints[i]);
+        }
     }
 }
