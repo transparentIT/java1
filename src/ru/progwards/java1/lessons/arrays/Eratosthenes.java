@@ -13,13 +13,15 @@ public class Eratosthenes {
             this.sieve = new boolean[N];
             Arrays.fill(this.sieve, true);
         }
+        this.sieve[1] = false;
         sift();
     }
 
     private void sift() {
-        for (int i = 2; i < this.sieve.length - 1; i++) {
-            if (i % 2 == 0) {
-                this.sieve[i] = false;
+        for (int i = 2; i * i < this.sieve.length - 1; i++) {
+            if (this.sieve[i]) {
+                for (int j = i * i; j < this.sieve.length - 1; j+=i)
+                    this.sieve[j] = false;
             }
         }
     }
