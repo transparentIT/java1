@@ -8,9 +8,7 @@ public class sumArrayItems {
     public int sumArrayItems(int[] a) {
         int k = 0;
         for (int i = 0; i < a.length; i++) {
-            if (a[i] % 2 == 0) {
-                k = k + a[i];
-            }
+            k = k + a[i];
         }
         return k;
     }
