@@ -7,7 +7,6 @@ public class ArraySort {
         int[] ints = {10, 15, 78, 11};
         ArraySort arraySort = new ArraySort();
         arraySort.sort(ints);
-        int f = 0;
     }
 
     public static void sort(int[] a) {
