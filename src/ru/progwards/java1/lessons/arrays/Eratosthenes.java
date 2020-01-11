@@ -27,12 +27,16 @@ public class Eratosthenes {
     }
 
     public boolean isSimple(int n) {
-        return this.sieve[n];
+        if (n == 0) {
+            return this.sieve[n];
+        } else {
+            return this.sieve[n - 1];
+        }
     }
 
     public static void main(String[] args) {
-        Eratosthenes eratosthenes = new Eratosthenes(10);
-        boolean b = eratosthenes.isSimple(0);
+        Eratosthenes eratosthenes = new Eratosthenes(300);
+        boolean b = eratosthenes.isSimple(299);
         System.out.println(b);
     }
 }
