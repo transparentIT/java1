@@ -6,36 +6,28 @@ public class Eratosthenes {
     private boolean[] sieve;
 
     public Eratosthenes(int N) {
-        if (N == 0) {
-            this.sieve = new boolean[1];
-            Arrays.fill(this.sieve, true);
-        } else {
-            this.sieve = new boolean[N];
-            Arrays.fill(this.sieve, true);
-            this.sieve[1] = false;
-        }
+        sieve = new boolean[N + 1];
+        Arrays.fill(sieve, true);
+        sieve[0] = true;
+        sieve[1] = true;
         sift();
     }
 
     private void sift() {
-        for (int i = 2; i * i < this.sieve.length - 1; i++) {
-            if (this.sieve[i]) {
-                for (int j = i * i; j < this.sieve.length - 1; j+=i)
-                    this.sieve[j] = false;
+        for (int i = 2; i < sieve.length; ++i) {
+            if (sieve[i]) {
+                for (int j = 2; i * j < sieve.length; ++j)
+                    sieve[i * j] = false;
             }
         }
     }
 
     public boolean isSimple(int n) {
-        if (n == 0) {
-            return this.sieve[n];
-        } else {
-            return this.sieve[n - 1];
-        }
+        return sieve[n];
     }
 
     public static void main(String[] args) {
-        Eratosthenes eratosthenes = new Eratosthenes(0);
+        Eratosthenes eratosthenes = new Eratosthenes(10);
         boolean b = eratosthenes.isSimple(0);
         System.out.println(b);
     }
