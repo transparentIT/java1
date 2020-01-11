@@ -30,7 +30,7 @@ public class Eratosthenes {
 
     public static void main(String[] args) {
         Eratosthenes eratosthenes = new Eratosthenes(10);
-        boolean b = eratosthenes.isSimple(6);
+        boolean b = eratosthenes.isSimple(0);
         System.out.println(b);
     }
 }
