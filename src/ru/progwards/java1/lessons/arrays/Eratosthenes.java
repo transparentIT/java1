@@ -12,8 +12,8 @@ public class Eratosthenes {
         } else {
             this.sieve = new boolean[N];
             Arrays.fill(this.sieve, true);
+            this.sieve[1] = false;
         }
-        this.sieve[1] = false;
         sift();
     }
 
@@ -35,8 +35,8 @@ public class Eratosthenes {
     }
 
     public static void main(String[] args) {
-        Eratosthenes eratosthenes = new Eratosthenes(301);
-        boolean b = eratosthenes.isSimple(299);
+        Eratosthenes eratosthenes = new Eratosthenes(0);
+        boolean b = eratosthenes.isSimple(0);
         System.out.println(b);
     }
 }
