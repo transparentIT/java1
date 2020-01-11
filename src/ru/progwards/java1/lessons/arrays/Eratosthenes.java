@@ -6,10 +6,14 @@ public class Eratosthenes {
     private boolean[] sieve;
 
     public Eratosthenes(int N) {
-        this.sieve = new boolean[N];
-        Arrays.fill(this.sieve, true);
+        if (N == 0) {
+            this.sieve = new boolean[1];
+            Arrays.fill(this.sieve, true);
+        } else {
+            this.sieve = new boolean[N];
+            Arrays.fill(this.sieve, true);
+        }
         sift();
-        int f = 1;
     }
 
     private void sift() {
@@ -25,6 +29,7 @@ public class Eratosthenes {
     }
 
     public static void main(String[] args) {
-        Eratosthenes eratosthenes = new Eratosthenes(10);
+        Eratosthenes eratosthenes = new Eratosthenes(0);
+        boolean b = eratosthenes.isSimple(0);
     }
 }
