@@ -2,7 +2,7 @@ package ru.progwards.java1.lessons.bitsworld;
 
 public class CheckBit {
     public static void main(String[] args) {
-        int b = -24;
+        int b = -70;
         byte b1 = (byte) b;
         int i = checkBit(b1, 3);
         System.out.println(i);
@@ -15,7 +15,7 @@ public class CheckBit {
         int j = 0;
         char[] chars = bin.toCharArray();
         for (int i = 0; i < chars.length; i++) {
-            if (i == bitNumber) {
+            if (i == (bitNumber - 1)) {
                 j = Integer.parseInt(Character.toString(chars[i]));
             }
         }
