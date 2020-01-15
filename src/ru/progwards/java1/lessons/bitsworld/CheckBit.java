@@ -3,8 +3,9 @@ package ru.progwards.java1.lessons.bitsworld;
 public class CheckBit {
     public static void main(String[] args) {
         int b = -70;
+        //int b = 77;
         byte b1 = (byte) b;
-        int i = checkBit(b1, 3);
+        int i = checkBit(b1, 0);
         System.out.println(i);
     }
     public static int checkBit(byte value, int bitNumber) {
@@ -15,8 +16,8 @@ public class CheckBit {
         int j = 0;
         char[] chars = bin.toCharArray();
         for (int i = 0; i < chars.length; i++) {
-            if (i == (bitNumber - 1)) {
-                j = Integer.parseInt(Character.toString(chars[i]));
+            if (i == bitNumber) {
+                j = Integer.parseInt(Character.toString(chars[(chars.length - 1) - i]));
             }
         }
         return j;
