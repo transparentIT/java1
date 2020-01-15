@@ -2,21 +2,19 @@ package ru.progwards.java1.lessons.bitsworld;
 
 public class SumBits {
     public static void main(String[] args) {
-        int i;
-        byte b = 0b0100101;
-        i = sumBits(b);
+        byte b = 5;
+        int i = sumBits(b);
         System.out.println(i);
     }
     public static int sumBits(byte value) {
-        return Integer.bitCount(value);
+        String bin = String.format("%8s", Integer.toBinaryString(value)).replace(' ', '0');
+        int j = 0;
+        char[] chars = bin.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if ((chars[i] & 1) == 1) {
+                j = j + 1;
+            }
+        }
+        return j;
     }
 }
-
-/*
-1.1 Реализовать функцию public static int sumBits(byte value), которая суммирует
-все биты параметра value. Например, для двоичного числа 0100101 функция должна вернуть 3.
-
-Подсказки:
-используйте & с числом 1 для того, чтобы оставить только один правый значащий бит;
-используйте сдвиг вправо для того, чтобы проверить следующий бит.
- */
