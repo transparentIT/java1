@@ -3,7 +3,8 @@ package ru.progwards.java1.lessons.bitsworld;
 public class Binary {
     private byte num;
     public static void main(String[] args) {
-
+        Binary binary = new Binary((byte) 0);
+        System.out.println(binary.toString());
     }
 
     public Binary(byte num) {
@@ -13,7 +14,7 @@ public class Binary {
     @Override
     public String toString() {
         int value2 = num & 0b0000000_0000000_0000000_11111111;
-        String bin = Integer.toBinaryString(value2);
+        String bin = String.format("%8s", Integer.toBinaryString(value2)).replace(' ', '0');
 
         String str = "";
         char[] chars = bin.toCharArray();
