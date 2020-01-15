@@ -8,7 +8,6 @@ public class SumBits {
         System.out.println(i);
     }
     public static int sumBits(byte value) {
-        int value1 = value;
         int value2 = value & 0b0000000_0000000_0000000_11111111;
         String bin = Integer.toBinaryString(value2);
 
