@@ -1,6 +1,6 @@
 package ru.progwards.java1.lessons.classes;
 
-public class Animal {
+public class Animal implements FoodCompare{
     public double weight;
     public double coefficient_weight = 0.02;
     public Animal(double weight) {
@@ -8,10 +8,26 @@ public class Animal {
         this.coefficient_weight = coefficient_weight;
     }
 
+    // 29.01.2020
+    public boolean equals(Object anObject) {
+        if (anObject.equals(this)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    // хэш сделать
+
     public static void main(String[] args) {
         Cow cow = new Cow(340);
         double d1 = cow.calculateFoodWeight();
         System.out.println(d1);
+    }
+
+    @Override
+    public int compareFoodPrice() {
+        return 0;
     }
 
     public enum AnimalKind {

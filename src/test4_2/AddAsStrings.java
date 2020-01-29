@@ -1,4 +1,4 @@
-package ru.progwards.java1.lessons;
+package test4_2;
 
 public class AddAsStrings {
     public static void main(String[] args) {
