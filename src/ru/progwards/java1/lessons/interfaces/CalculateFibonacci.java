@@ -35,6 +35,9 @@ public class CalculateFibonacci {
     }
 
     public static CacheInfo getLastFibo() {
+        if (lastFibo == null) {
+            lastFibo = new CacheInfo();
+        }
         return lastFibo;
     }
 
