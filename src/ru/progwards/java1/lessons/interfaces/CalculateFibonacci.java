@@ -11,8 +11,7 @@ public class CalculateFibonacci {
         if (n == getLastFibo().n) {
             return getLastFibo().fibo;
         }
-        int n0 = 1;
-        int n1 = 1;
+        int n0 = 1;int n1 = 1;
         int n2 = 0;
         for(int i = 3; i <= n; i++){
             n2 = n0 + n1;
