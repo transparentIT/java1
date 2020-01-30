@@ -47,7 +47,6 @@ public class CalculateFibonacci {
     }
 
     public static void clearLastFibo() {
-        CacheInfo lastFibo = new CacheInfo();
         lastFibo = null;
     }
 }
