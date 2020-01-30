@@ -8,17 +8,6 @@ public class Animal implements FoodCompare{
         this.coefficient_weight = coefficient_weight;
     }
 
-    // 29.01.2020
-    public boolean equals(Object anObject) {
-        if (anObject.equals(this)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    // хэш сделать
-
     public static void main(String[] args) {
         Cow cow = new Cow(340);
         double d1 = cow.calculateFoodWeight();

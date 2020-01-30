@@ -1,5 +1,7 @@
 package ru.progwards.java1.lessons.interfaces;
 
+import java.util.Objects;
+
 import static ru.progwards.java1.lessons.interfaces.Animal.FoodKind.*;
 
 public class Animal implements FoodCompare {
@@ -7,6 +9,20 @@ public class Animal implements FoodCompare {
     @Override
     public int compareFoodPrice(Animal aminal) {
         return Double.compare(this.getFoodPrice(), aminal.getFoodPrice());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return Double.compare(animal.weight, weight) == 0 &&
+                Double.compare(animal.coefficient_weight, coefficient_weight) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(weight, coefficient_weight);
     }
 
     public double weight;
@@ -55,8 +71,6 @@ public class Animal implements FoodCompare {
                 return 20.0;
             case CORN:
                 return 50.0;
-            case UNKNOWN:
-                return 0.0;
             default:
                 return 0.0;
         }
