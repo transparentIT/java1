@@ -6,7 +6,7 @@ public class Animal implements FoodCompare {
 
     @Override
     public int compareFoodPrice(Animal aminal) {
-        return Double.compare(aminal.getFoodPrice(), this.getFoodPrice());
+        return Double.compare(this.getFoodPrice(), aminal.getFoodPrice());
     }
 
     public double weight;
@@ -62,3 +62,14 @@ public class Animal implements FoodCompare {
         }
     }
 }
+/*
+ERROR: Тест "Метод equals(Object anObject)" не пройден. Метод возвращает неверное значение.
+ Результат вызова new Duck(1D).equals(new Duck(1D)): false. Ожидалось: true.
+
+OK: Тест "Метод getFood1kgPrice()" пройден успешно.
+OK: Тест "Метод getFoodPrice()" пройден успешно.
+ERROR: Тест "Интерфейс FoodCompare, метод compareFoodPrice(Animal o)" не пройден.
+Метод возвращает неверные результаты сравнения для new Animal(1D).сompareFoodPrice(new Cow(1D)): 1,
+ожидалось значение меньше 0.
+По данной задаче в целом не зачет, решение возвращено на доработку. Задача выполнена на 30.00%%
+ */
