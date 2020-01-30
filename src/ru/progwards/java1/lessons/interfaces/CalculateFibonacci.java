@@ -3,8 +3,8 @@ package ru.progwards.java1.lessons.interfaces;
 public class CalculateFibonacci {
     private static CacheInfo lastFibo;
     public static int fiboNumber(int n) {
-        if (n == lastFibo.n) {
-            return lastFibo.fibo;
+        if (n == getLastFibo().n) {
+            return getLastFibo().fibo;
         }
         int n0 = 1;
         int n1 = 1;
