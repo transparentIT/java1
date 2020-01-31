@@ -4,7 +4,10 @@ import java.util.Objects;
 
 import static ru.progwards.java1.lessons.interfaces.Animal.FoodKind.*;
 
-public class Animal implements FoodCompare {
+public class Animal implements FoodCompare, CompareWeight {
+
+    public double weight;
+    public double coefficient_weight = 0.02;
 
     @Override
     public int compareFoodPrice(Animal aminal) {
@@ -25,8 +28,6 @@ public class Animal implements FoodCompare {
         return Objects.hash(weight, coefficient_weight);
     }
 
-    public double weight;
-    public double coefficient_weight = 0.02;
     public Animal(double weight) {
         this.weight = weight;
         this.coefficient_weight = coefficient_weight;
@@ -34,6 +35,16 @@ public class Animal implements FoodCompare {
 
     public double getFoodPrice() {
         return calculateFoodWeight() * getFood1kgPrice();
+    }
+
+    @Override
+    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
+        return null;
+    }
+
+    @Override
+    public int compareWeightAnimal(Animal animal) {
+        return Double.compare(this.weight, animal.weight);
     }
 
     public enum FoodKind {
